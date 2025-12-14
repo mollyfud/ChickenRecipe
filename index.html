@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon, Garlic & Paprika Chicken (Kidney Friendly)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+        .recipe-card {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        .check-box {
+            appearance: none;
+            background-color: #fff;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 2px solid #cbd5e1;
+            border-radius: 0.15em;
+            display: grid;
+            place-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .check-box::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em white;
+            transform-origin: center;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        }
+        .check-box:checked {
+            background-color: #f97316;
+            border-color: #f97316;
+        }
+        .check-box:checked::before {
+            transform: scale(1);
+        }
+        .check-box:checked + span {
+            text-decoration: line-through;
+            color: #94a3b8;
+        }
+    </style>
+
+    <!-- JSON-LD for Recipe Apps (Paprika, etc.) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Recipe",
+      "name": "Lemon, Garlic & Paprika Chicken (Kidney Friendly)",
+      "author": {
+        "@type": "Person",
+        "name": "Family Kitchen"
+      },
+      "description": "A kidney-friendly chicken dinner using lemon and paprika instead of salt and black pepper.",
+      "prepTime": "PT10M",
+      "cookTime": "PT15M",
+      "totalTime": "PT25M",
+      "recipeYield": "2 servings",
+      "keywords": "kidney friendly, renal diet, low sodium, chicken, healthy",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "1 serving"
+      },
+      "recipeIngredient": [
+        "2 medium Chicken Breasts (boneless, skinless)",
+        "1 Lemon (Juice and Zest)",
+        "2 cloves Garlic, minced (or 1 tsp Garlic Powder)",
+        "1 tsp Dried Oregano (or Thyme)",
+        "1/2 tsp Sweet Paprika",
+        "1 tbsp Olive Oil",
+        "2 cups White Rice (Cooked, for serving)",
+        "2 cups Green Beans (Steamed, for serving)"
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "text": "In a bowl, combine the olive oil, lemon juice, lemon zest, minced garlic, oregano, and sweet paprika."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Coat the chicken breasts thoroughly in this mixture. Let it sit for 20 minutes if you have time to marinate."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Heat a non-stick pan over medium heat."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Cook the chicken for 6–7 minutes on each side until golden and cooked through. (Alternatively, bake at 200°C for 20–25 minutes)."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Plate up with steamed white rice and green beans."
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-700">
+
+    <div class="max-w-3xl mx-auto my-8 px-4 sm:px-6">
+        
+        <div class="recipe-card bg-white rounded-2xl overflow-hidden border border-slate-100">
+            
+            <!-- Header / Banner -->
+            <div class="bg-orange-50 p-8 sm:p-10 border-b border-orange-100 text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full text-orange-500 mb-4 shadow-sm">
+                    <i class="fas fa-drumstick-bite text-2xl"></i>
+                </div>
+                <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Lemon, Garlic & Paprika Chicken</h1>
+                <p class="text-lg text-slate-600 italic">Kidney Friendly & Low Sodium</p>
+            </div>
+
+            <!-- Meta Data Row -->
+            <div class="flex flex-wrap border-b border-slate-100 divide-x divide-slate-100 bg-white">
+                <div class="flex-1 p-4 text-center">
+                    <span class="block text-xs font-bold uppercase tracking-wide text-slate-400">Prep Time</span>
+                    <span class="font-semibold text-slate-800"><i class="far fa-clock mr-1 text-orange-400"></i> 10 min</span>
+                </div>
+                <div class="flex-1 p-4 text-center">
+                    <span class="block text-xs font-bold uppercase tracking-wide text-slate-400">Cook Time</span>
+                    <span class="font-semibold text-slate-800"><i class="fas fa-fire-alt mr-1 text-orange-400"></i> 15 min</span>
+                </div>
+                <div class="flex-1 p-4 text-center">
+                    <span class="block text-xs font-bold uppercase tracking-wide text-slate-400">Servings</span>
+                    <span class="font-semibold text-slate-800"><i class="fas fa-user-friends mr-1 text-orange-400"></i> 2 ppl</span>
+                </div>
+            </div>
+
+            <div class="p-6 sm:p-10">
+                
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    A delicious, kidney-friendly chicken dinner using fresh lemon and sweet paprika to boost flavor without adding salt or black pepper. Perfect for a renal diet.
+                </p>
+
+                <!-- Two Column Layout for Desktop -->
+                <div class="grid md:grid-cols-3 gap-10">
+                    
+                    <!-- Ingredients Column -->
+                    <div class="md:col-span-1">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                            <i class="fas fa-carrot text-orange-500 mr-2 text-sm"></i> Ingredients
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" class="check-box">
+                                    <span class="text-sm leading-tight">2 medium Chicken Breasts <span class="text-slate-400 block text-xs">(boneless, skinless)</span></span>
+                                </label>
+                            </li>
+                            <li class="flex items-start">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" class="check-box">
+                                    <span class="text-sm leading-tight">1 Lemon <span class="text-slate-400 block text-xs">(Juice & Zest)</span></span>
+                                </label>
+                            </li>
+                            <li class="flex items-start">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" class="check-box">
+                                    <span class="text-sm leading-tight">2 cloves Garlic <span class="text-slate-400 block text-xs">(minced)</span></span>
+                                </label>
+                            </li>
+                            <li class="flex items-start">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" class="check-box">
+                                    <span class="text-sm leading-tight">1 tsp Dried Oregano <span class="text-slate-400 block text-xs">(or Thyme)</span></span>
+                                </label>
+                            </li>
+                            <li class="flex items-start">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" class="check-box">
+                                    <span class="text-sm leading-tight">1/2 tsp Sweet Paprika</span>
+                                </label>
+                            </li>
+                            <li class="flex items-start">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" class="check-box">
+                                    <span class="text-sm leading-tight">1 tbsp Olive Oil</span>
+                                </label>
+                            </li>
+                            <div class="my-4 border-t border-slate-100"></div>
+                            <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider mb-2">For Serving</h4>
+                            <li class="flex items-start">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" class="check-box">
+                                    <span class="text-sm leading-tight">2 cups White Rice <span class="text-slate-400 block text-xs">(Cooked)</span></span>
+                                </label>
+                            </li>
+                            <li class="flex items-start">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" class="check-box">
+                                    <span class="text-sm leading-tight">2 cups Green Beans <span class="text-slate-400 block text-xs">(Steamed)</span></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Instructions Column -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                            <i class="fas fa-list-ol text-orange-500 mr-2 text-sm"></i> Directions
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex group">
+                                <div class="flex-shrink-0 mr-4 flex flex-col items-center">
+                                    <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-sm">1</div>
+                                    <div class="h-full w-px bg-slate-100 my-1 group-last:hidden"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <p class="text-slate-700">In a bowl, combine the <span class="font-semibold">olive oil</span>, <span class="font-semibold">lemon juice</span>, <span class="font-semibold">lemon zest</span>, minced <span class="font-semibold">garlic</span>, <span class="font-semibold">oregano</span>, and <span class="font-semibold">sweet paprika</span>.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex group">
+                                <div class="flex-shrink-0 mr-4 flex flex-col items-center">
+                                    <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-sm">2</div>
+                                    <div class="h-full w-px bg-slate-100 my-1 group-last:hidden"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <p class="text-slate-700">Coat the <span class="font-semibold">chicken breasts</span> thoroughly in this mixture. Let it sit for 20 minutes if you have time to marinate, otherwise proceed immediately.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex group">
+                                <div class="flex-shrink-0 mr-4 flex flex-col items-center">
+                                    <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-sm">3</div>
+                                    <div class="h-full w-px bg-slate-100 my-1 group-last:hidden"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <p class="text-slate-700">Heat a non-stick pan over <span class="font-semibold">medium heat</span>.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex group">
+                                <div class="flex-shrink-0 mr-4 flex flex-col items-center">
+                                    <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-sm">4</div>
+                                    <div class="h-full w-px bg-slate-100 my-1 group-last:hidden"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <p class="text-slate-700">Cook the chicken for <span class="font-semibold">6–7 minutes on each side</span> until golden and cooked through.</p>
+                                    <p class="text-sm text-slate-500 mt-2 bg-slate-50 p-2 rounded border border-slate-100"><i class="fas fa-info-circle mr-1"></i> Alternative: Bake at 200°C for 20–25 minutes.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex group">
+                                <div class="flex-shrink-0 mr-4 flex flex-col items-center">
+                                    <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-sm">5</div>
+                                </div>
+                                <div>
+                                    <p class="text-slate-700">Plate up with steamed <span class="font-semibold">white rice</span> and <span class="font-semibold">green beans</span>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Notes Section -->
+                <div class="mt-10 bg-blue-50 rounded-xl p-6 border border-blue-100">
+                    <h4 class="text-blue-800 font-bold mb-2 text-sm uppercase tracking-wide flex items-center">
+                        <i class="fas fa-user-md mr-2"></i> Kidney Health Note
+                    </h4>
+                    <p class="text-blue-700 text-sm">
+                        This recipe controls Potassium and Phosphorus by using white rice and green beans instead of potatoes or tomato-based sauces. It is low sodium and avoids black pepper.
+                    </p>
+                </div>
+
+            </div>
+            
+            <!-- Footer -->
+            <div class="bg-slate-50 p-4 text-center border-t border-slate-100">
+                <p class="text-xs text-slate-400">&copy; Family Kitchen Recipes</p>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
